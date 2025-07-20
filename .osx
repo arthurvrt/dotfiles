@@ -48,16 +48,16 @@ defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
 # Automatically quit printer app once the print jobs complete
 defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
 
-# Restart automatically if the computer freezes
-if [[ "$RUN_AS_ROOT" = true ]]; then
-  systemsetup -setrestartfreeze on
-fi
+# # Restart automatically if the computer freezes
+# if [[ "$RUN_AS_ROOT" = true ]]; then
+#   systemsetup -setrestartfreeze on
+# fi
 
-# Disable smart quotes as they’re annoying when typing code
-defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
+# # Disable smart quotes as they’re annoying when typing code
+# defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
 
-# Disable smart dashes as they’re annoying when typing code
-defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
+# # Disable smart dashes as they’re annoying when typing code
+# defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
 
 # Set background to dark-grey color
 osascript -e 'tell application "Finder" to set desktop picture to POSIX file "/System/Library/Desktop Pictures/Solid Colors/Stone.png"'
@@ -70,11 +70,11 @@ osascript -e 'tell application "Finder" to set desktop picture to POSIX file "/S
 defaults write com.apple.AppleMultitouchTrackpad FirstClickThreshold -int 0
 defaults write com.apple.AppleMultitouchTrackpad ActuationStrength -int 0
 
-# Trackpad: map bottom right corner to right-click (requires restart!)
-defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadRightClick -bool true
-defaults write com.apple.AppleMultitouchTrackpad TrackpadRightClick -bool true
-defaults write com.apple.AppleMultitouchTrackpad TrackpadCornerSecondaryClick -int 2
-defaults write NSGlobalDomain ContextMenuGesture -int 1
+# # Trackpad: map bottom right corner to right-click (requires restart!)
+# defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadRightClick -bool true
+# defaults write com.apple.AppleMultitouchTrackpad TrackpadRightClick -bool true
+# defaults write com.apple.AppleMultitouchTrackpad TrackpadCornerSecondaryClick -int 2
+# defaults write NSGlobalDomain ContextMenuGesture -int 1
 
 # Disable press-and-hold for keys in favor of key repeat
 defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
